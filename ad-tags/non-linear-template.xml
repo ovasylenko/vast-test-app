@@ -1,0 +1,27 @@
+<VAST version="2.0">
+    <Ad id="228">
+        <InLine>
+            <AdSystem version="4.11.1-45">LiveRail</AdSystem>
+            <AdTitle>
+                <![CDATA[ TV Overlay PNG ]]>
+            </AdTitle>
+            <Description>
+                <![CDATA[ ]]>
+            </Description>
+            <Creatives>
+                <Creative sequence="1" id="8455">
+                    <NonLinearAds>
+                        <NonLinear width="300" height="60">
+                            <IFrameResource creativeType="text/html">
+                                <![CDATA[
+                                 http://pages.mobileacademy.com/ae/du/ma/InternationalCuisine/281/13801
+                                ]]>
+                            </StaticResource>
+                        </NonLinear>
+                    </NonLinearAds>
+                </Creative>
+            </Creatives>
+            <Extensions></Extensions>
+        </InLine>
+    </Ad>
+</VAST>
