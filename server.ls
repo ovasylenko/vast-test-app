@@ -18,8 +18,8 @@ app.get "/crossdomain.xml", (req,res) ->
 app.get "/vast", (req,res) ->
     try
         res.set 'Content-Type', 'text/xml'
-        console.log "#__dirname/ad-tags/VAST-template.xml"
-        err, xml <- fs.read-file "#__dirname/ad-tags/VAST-template.xml", \utf8 
+        console.log "#__dirname/ad-tags/vast-template.xml"
+        err, xml <- fs.read-file "#__dirname/ad-tags/vast-template.xml", \utf8 
         return die err, res if !!err 
         res.end xml
     catch err
