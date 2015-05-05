@@ -1,1 +1,1 @@
-web: lsc server.ls
+web: node server.js
