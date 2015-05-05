@@ -5,8 +5,12 @@
             <AdTitle>title</AdTitle>
             <Creatives>
                 <Creative>
-                    <Linear>
-                        <Duration>00:00:05</Duration>
+                    <Linear skipoffset="30%">
+                        <VideoClicks>
+                            <ClickThrough id="clickme">
+                                <![CDATA[ http://www.mobileacademy.com ]]>
+                            </ClickThrough>
+                        </VideoClicks>
                         <MediaFiles>
                             <MediaFile height="270" width="370" type="video/mp4">
                                 <![CDATA[http://stark-wave-4682.herokuapp.com/videos/photo-course.mp4]]>
