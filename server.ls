@@ -23,8 +23,16 @@ app.get "/crossdomain.xml", (req,res) ->
 app.get "/vast.xml", (req,res) ->
     try
         res.set 'Content-Type', 'text/xml'
-        console.log "#__dirname/ad-tags/vast-template.xml"
         err, xml <- fs.read-file "#__dirname/ad-tags/vast-template.xml", \utf8 
+        return die err, res if !!err 
+        res.end xml
+    catch err
+        res.end JSON.stringify err
+
+app.get "/n-vast.xml", (req,res) ->
+    try
+        res.set 'Content-Type', 'text/xml'
+        err, xml <- fs.read-file "#__dirname/ad-tags/non-linear-template.xml", \utf8 
         return die err, res if !!err 
         res.end xml
     catch err
