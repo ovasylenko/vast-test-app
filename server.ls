@@ -37,5 +37,5 @@ app.get "/video.flv", (req, res) ->
    
     rs.pipe res 
 
-app.listen config.port
+app.listen  (process.env.PORT or config.port)
 console.log "listening on port #{config.port}"
