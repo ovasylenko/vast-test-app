@@ -13,9 +13,14 @@ app = express!
 
 app.get "/crossdomain.xml", (req,res) ->
     res.set 'Content-Type', 'text/xml'
-    res.end '<?xml version="1.0" ?><cross-domain-policy><allow-access-from domain="*"/></cross-domain-policy>'
+    res.end """ <?xml version="1.0" ?>
+                <cross-domain-policy>
+                    <site-control permitted-cross-domain-policies="all"/>
+                    <allow-access-from domain="*" secure="false"/>
+                    <allow-http-request-headers-from domain="*" headers="*"/>
+                </cross-domain-policy> """
     
-app.get "/vast", (req,res) ->
+app.get "/vast.xml", (req,res) ->
     try
         res.set 'Content-Type', 'text/xml'
         console.log "#__dirname/ad-tags/vast-template.xml"
