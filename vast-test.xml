@@ -1,0 +1,22 @@
+<VAST version="2.0">
+    <Ad id="preroll-1">
+        <InLine>
+            <AdSystem>name</AdSystem>
+            <AdTitle>title</AdTitle>
+            <Creatives>
+                <Creative>
+                    <Linear>
+                        <Duration>00:00:05</Duration>
+                        <MediaFiles>
+                            <MediaFile height="270" width="370" type="video/x-flv">
+                                <![CDATA[
+                                http://www.mediacollege.com/video-gallery/testclips/20051210-w50s.flv
+                                ]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>
