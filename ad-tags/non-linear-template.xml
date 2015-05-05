@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <VAST version="2.0">
     <Ad id="228">
         <InLine>
@@ -5,11 +6,8 @@
             <AdTitle>
                 <![CDATA[ TV Overlay PNG ]]>
             </AdTitle>
-            <Description>
-                <![CDATA[ ]]>
-            </Description>
             <Creatives>
-                <Creative sequence="1" id="8455">
+                <Creative>
                     <NonLinearAds>
                         <NonLinear width="320" height="480">
                             <IFrameResource creativeType="text/html">
