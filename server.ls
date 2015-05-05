@@ -30,8 +30,9 @@ app.get "/vast.xml", (req,res) ->
     catch err
         res.end JSON.stringify err
 
-app.get "/video.flv", (req, res) ->
-    file-path = "#__dirname/ad-video/ad-video.flv"
+app.get "/videos/:name", (req, res) ->
+    name = req.params.name
+    file-path = "#__dirname/ad-video/#{name}"
     stat = fs.stat-sync filePath
 
     res.writeHead do

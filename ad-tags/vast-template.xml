@@ -8,8 +8,8 @@
                     <Linear>
                         <Duration>00:00:05</Duration>
                         <MediaFiles>
-                            <MediaFile height="270" width="370" type="video/x-flv">
-                                <![CDATA[http://stark-wave-4682.herokuapp.com/video.flv]]>
+                            <MediaFile height="270" width="370" type="video/mp4">
+                                <![CDATA[http://stark-wave-4682.herokuapp.com/videos/photo-course.mp4]]>
                             </MediaFile>
                         </MediaFiles>
                     </Linear>
