@@ -9,7 +9,7 @@
                         <Duration>00:00:05</Duration>
                         <MediaFiles>
                             <MediaFile height="270" width="370" type="video/x-flv">
-                                <![CDATA[http://localhost:6060/video.flv]]>
+                                <![CDATA[http://stark-wave-4682.herokuapp.com/video.flv]]>
                             </MediaFile>
                         </MediaFiles>
                     </Linear>
