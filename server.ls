@@ -11,14 +11,14 @@ app = express!
     ..set \views, __dirname + \/
     ..use "/public" express.static "#__dirname/public"
 
-# app.get "/crossdomain.xml", (req,res) ->
-#     res.set 'Content-Type', 'text/xml'
-#     res.end """ <?xml version="1.0" ?>
-#                 <cross-domain-policy>
-#                     <site-control permitted-cross-domain-policies="all"/>
-#                     <allow-access-from domain="*" secure="false"/>
-#                     <allow-http-request-headers-from domain="*" headers="*"/>
-#                 </cross-domain-policy> """
+app.get "/crossdomain.xml", (req,res) ->
+    res.set 'Content-Type', 'text/xml'
+    res.end """ <?xml version="1.0" ?>
+                <cross-domain-policy>
+                    <site-control permitted-cross-domain-policies="all"/>
+                    <allow-access-from domain="*" secure="false"/>
+                    <allow-http-request-headers-from domain="*" headers="*"/>
+                </cross-domain-policy> """
     
 app.get "/vast.xml", (req,res) ->
     try
