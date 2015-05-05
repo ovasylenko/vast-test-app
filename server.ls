@@ -16,11 +16,14 @@ app.get "/crossdomain.xml", (req,res) ->
     res.end '<?xml version="1.0" ?><cross-domain-policy><allow-access-from domain="*"/></cross-domain-policy>'
     
 app.get "/vast", (req,res) ->
-    res.set 'Content-Type', 'text/xml'
-    console.log "#__dirname/ad-tags/VAST-template.xml"
-    err, xml <- fs.read-file "#__dirname/ad-tags/VAST-template.xml", \utf8 
-    return console.log "ERROR IN FILE WATECHER", err if !!err 
-    res.end xml
+    try
+        res.set 'Content-Type', 'text/xml'
+        console.log "#__dirname/ad-tags/VAST-template.xml"
+        err, xml <- fs.read-file "#__dirname/ad-tags/VAST-template.xml", \utf8 
+        return die err, res if !!err 
+        res.end xml
+    catch err
+        res.end JSON.stringify err
 
 app.get "/video.flv", (req, res) ->
     file-path = "#__dirname/ad-video/ad-video.flv"
