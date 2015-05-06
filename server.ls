@@ -2,6 +2,7 @@ config = require \./config
 express = require \express
 ejs = require \ejs
 fs = require \fs
+url = require \url
 
 die = (err, res) ->
     res.status 500
@@ -42,6 +43,7 @@ app.get "/vast.xml", (req,res) ->
 app.get "/track/:eventType", (req,res) ->
     { event-type } = req.params
     { user-id } = req.query.user-id
+    { query : { user-id } } = url.parse(request.url, true);
 
     console.log event-type, user-id
 
