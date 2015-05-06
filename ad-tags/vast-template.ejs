@@ -4,12 +4,13 @@
         <InLine>
             <AdSystem>Mone VAST</AdSystem>
             <AdTitle><%= campaignId %></AdTitle>
+            <Impression>
+                <![CDATA[<%= trackUrl %>impression?userId=<%= userId %>]]>
+            </Impression>
             <Creatives>
                 <Creative>
                     <Linear skipoffset="30%">
-                        <Impression>
-                            <![CDATA[<%= trackUrl %>impression?userId=<%= userId %>]]>
-                        </Impression>
+                     
                         <TrackingEvents>
                             <Tracking event="creativeView"><![CDATA[<%= trackUrl %>creativeView?userId=<%= userId %>]]></Tracking>
                             <Tracking event="start"><![CDATA[<%= trackUrl %>start?userId=<%= userId %>]]></Tracking>
