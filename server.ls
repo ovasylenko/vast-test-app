@@ -16,6 +16,7 @@ app = express!
 
 app.get "/crossdomain.xml", (req,res) ->
     res.set 'Content-Type', 'text/xml'
+
     res.end """ <?xml version="1.0" ?>
                 <cross-domain-policy>
                     <site-control permitted-cross-domain-policies="all"/>
@@ -43,7 +44,7 @@ app.get "/vast.xml", (req,res) ->
 app.get "/track/:eventType", (req,res) ->
     { event-type } = req.params
     { user-id } = req.query.user-id
-    { query : { user-id } } = url.parse req.url, true
+    { query : { user-id } } = url.parse(req.url, true)
 
     console.log event-type, user-id
 
