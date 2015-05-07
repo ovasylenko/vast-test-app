@@ -74,7 +74,7 @@ app.get "/videos/:name", (req, res) ->
     res.writeHead do
         200
         {
-            'Content-Type': 'video/x-flv'
+            'Content-Type': 'video/mp4'
             'Content-Length': stat.size
         }
 
