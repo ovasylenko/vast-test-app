@@ -39,7 +39,7 @@ app.get "/vast.xml", (req,res) ->
             session-id: \0
             user-id: \1
             visit-id: \2
-            media-file-url: \http://stark-wave-4682.herokuapp.com/videos/photo-course.mp4
+            media-file-url: \http://stark-wave-4682.herokuapp.com/videos/selfiesForDummies.mp4
             height: 270
             width: 300
             mime-type: \video/mp4
