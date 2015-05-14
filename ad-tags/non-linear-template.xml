@@ -1,25 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<VAST version="2.0">
-    <Ad id="228">
-        <InLine>
-            <AdSystem version="4.11.1-45">LiveRail</AdSystem>
-            <AdTitle>
-                <![CDATA[ TV Overlay PNG ]]>
-            </AdTitle>
-            <Creatives>
-                <Creative>
-                    <NonLinearAds>
-                        <NonLinear width="320" height="480">
-                            <IFrameResource creativeType="text/html">
-                                <![CDATA[
-                                 http://pages.mobileacademy.com/lp/InternationalCuisine/ae-du-en-html5
-                                ]]>
-                            </IFrameResource>
-                        </NonLinear>
-                    </NonLinearAds>
-                </Creative>
-            </Creatives>
-            <Extensions></Extensions>
-        </InLine>
-    </Ad>
+<VAST version="3.0">
+  <Ad id="aa444">
+    <InLine>
+      <AdSystem>rwerwer</AdSystem>
+      <AdTitle>ewrwerwer</AdTitle>
+      <Creatives>
+         <Creative  sequence="1" id="creative-1" adID="1" >
+          <NonLinearAds>
+            <NonLinear height="250" width="250"  minSuggestedDuration="00:00:15" >
+                <HTMLResource>
+                  <![CDATA[
+                    <link href="https://localhost/public/normalized.css" rel="stylesheet">
+                          <script type="text/javascript" dont-minify="" src="mraid.js"></script>
+                          <div id="container" class="show-subscribe-button">
+                  <a href="javascript:void(0)" id="mraid-close" style="display:none"></a>
+
+                              <div
+                              class="price-info">LKR30+tax per day</div>
+                          <div class="title">ALL ABOUT
+                              <br>...</div>
+                          <div class="holder">
+                              <!-- OPERATOR SELECTION -->
+                              <div id="operator-selection" style="display:none">
+                                  <div id="operators"> <span>Select your operator to subscribe</span>
+                   <a data-operator-id="252"
+                                      href="javascript:void(0)" class="btn-operator subscribe">
+                                         <img src="http://tags.mli.me/public/img/operators/dialog.png" alt="">
+                                          <span>Dialog</span>
+                                      </a>
+
+                                      <!-- <a data-operator-id="134" href="javascript:void(0)"
+                                      class="btn-operator subscribe">
+                                         <img src="http://tags.mli.me/public/img/operators/etisalat.png" alt="" />
+                                          <span>Etisalat</span>
+                                      </a>
+                                      --> <a data-operator-id="147" href="javascript:void(0)" class="btn-operator subscribe">
+                                          <img src="http://tags.mli.me/public/img/operators/airtel.png" alt="">
+                                          <span>Airtel</span>
+                                      </a>
+                   <a data-operator-id="198" href="javascript:void(0)"
+                                      class="btn-operator subscribe">
+                                          <img src="http://tags.mli.me/public/img/operators/mobitel.png" alt="">
+                                          <span>Mobitel</span>
+                                      </a>
+
+                                  </div>
+                              </div>
+                              <!-- SUBSCRIBE BUTTON -->
+                              <div id="default-state"> <a href="javascript:void(0)" class="btn subscribe">
+                                  
+                                      <span data-x-role="subscribe-now">Subscribe Now!</span>
+                                      
+                                  </a>
+
+                              </div>
+                              <!-- DOUBLE CONFIRMATION -->
+                              <div id="double-confirmation" style="display: none"> <span data-x-role="subscription-info" class="subscription-info">
+                                  
+                                      Your subscription will be renewed automatically.
+                                      
+                                  </span>
+                   <a href="javascript:void(0)" id="confirm" class="btn">
+                                  
+                                      <span data-x-role="confirmation-yes">YES</span>
+                                      
+                                  </a>
+                   <span data-x-role="confirmation-no" id="double-confirmation-no">No</span>
+
+                              </div>
+                              <!-- NUMBER ENTRY -->
+                              <form id="number-entry" style="display:none">
+                                  <label data-x-role="enter-number">Enter your mobile number</label>
+                                  <input type="tel" id="number" maxlength="10"
+                                  value="07"> <a href="javascript:void(0)" id="submit-number" class="btn">
+                                  
+                                      <span data-x-role="number-entry-submit">Continue</span>
+                                      
+                                  </a>
+
+                                  <div id="already-subscribed-error" data-x-role="already-subscribed-error"
+                                  style="display: none">You are already subscribed to this service</div>
+                                  <div id="invalid-number-error"
+                                  data-x-role="invalid-number-error" style="display: none">Please enter a valid number</div>
+                              </form>
+                              <!-- PIN ENTRY -->
+                              <form id="pin-entry" style="display:none">
+                                  <label data-x-role="pin-entry-help"> <strong>You will now receive an sms with pin code.</strong> 
+                                      <br>To confirm your subscription enter the PIN code below</label>
+                                  <input type="tel"
+                                  id="pin" maxlength="4"> <a href="javascript:void(0)" id="submit-pin" class="btn">
+                              
+                                  <span data-x-role="pin-entry-submit">Submit</span>
+                              
+                              </a>
+
+                                  <div id="invalid-pin-error" data-x-role="invalid-pin-error"
+                                  style="display:none">You entered a wrong PIN</div>
+                              </form>
+                              <!-- MO MESSAGE -->
+                              <div id="mo" style="display:none"> <span data-x-role="subscription-info" class="subscription-info">Your subscription will be renewed automatically.</span>
+
+                                  <h3
+                                  data-x-role="mo-sms">sms</h3>
+                                      <div id="keyword"></div>
+                                       <h3 data-x-role="mo-to">to</h3>
+
+                                      <div id="short-code"></div>
+                              </div>
+                              <!-- CONGRATS -->
+                              <div id="congrats" style="display:none">
+                                   <h3 data-x-role="congrats">Congratulations</h3>
+
+                                   <h6 data-x-role="successfully-subscribed">You have been successfully subscribed <br>to the service</h6>
+
+                              </div>
+                          </div>
+                          <div class="disclaimer">The Best mobile learning course now available in Sri Lanka for only LKR30+tax
+                              per day. © 2015. <a href="http://m.mobileacademy.com/Home/Terms?x-lang=en"
+                              target="_blank">T &amp; C apply</a>
+
+                          </div>
+                          <div id="parallax"></div>
+                          </div>
+                          <script type="text/javascript" src="http://tags.mli.me/public/livescript/prelude.js"></script>
+                          <script type="text/javascript" src="http://tags.mli.me/public/livescript/mobi-spy.js"></script>
+                          <script type="text/javascript" src="http://tags.mli.me/public/url-parser.js"></script>
+                          <script type="text/javascript" src="http://tags.mli.me/public/livescript/utils.js"></script>
+                          <script type="text/javascript" src="http://tags.mli.me/public/livescript/mobi-wap-api.js"></script>
+                          <script type="text/javascript" src="http://tags.mli.me/public/livescript/landing-page.js"></script>
+                          <script type="text/javascript" src="http://tags.mli.me/public/livescript/common-landing-page.js"></script>
+                          <script type="text/javascript" src="http://tags.mli.me/public/livescript/mraid-landing-page.js"></script>
+                          <script type="text/javascript" src="http://tags.mli.me/public/livescript/common-mraid-landing-page.js"></script>
+                          <script type="text/javascript" src="http://tags.mli.me/public/livescript/customizations.js"></script>
+                  ]]>
+                </HTMLResource>
+            </NonLinear>
+          </NonLinearAds>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
 </VAST>

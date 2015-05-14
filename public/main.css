@@ -1,0 +1,347 @@
+/* CSS Document */
+body{
+  margin:0;
+  padding:0;
+  background-color: #fff;
+  font-family:Arial, sans-serif;
+}
+
+#mraid-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 25px;
+  height: 25px;
+  z-index: 100;
+  color: white;
+  background-image: url('http://tags.mli.me/public/mraid-landing-pages/img/close.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+#container{
+  width:250px;
+  height:250px;
+  display:block;
+  overflow:hidden;
+  position:relative;
+  border:1px solid #ccc;
+  background-color: #fff;
+}
+
+.price-info{
+  z-index:2;
+  display:block;
+  font-size:9px;
+  padding:5px 0px;
+  position:relative;
+  text-align:center;
+}
+
+.title{
+  z-index:2;
+  color:#c00039;
+  display:block;
+  font-size:28px;
+  padding:5px 0px;
+  line-height:14px;
+  font-weight:bold;
+  position:relative;
+  text-align:center;
+}
+
+.holder{
+  z-index:2;
+  width:200px;
+  height:135px;
+  display:block;
+  margin:2px auto;
+  padding:0px 10px;
+  position:relative;
+  text-align:center;
+  border-radius:6px;
+  border:1px solid #000;
+  box-shadow:inset 0px 1px 1px rgba(255,255,255,0.3);
+  background-color:rgba(0,0,0,0.7);
+}
+
+#container.show-subscribe-button .holder,
+#container.show-default-state .holder,
+#container.show-operator-selection .holder{
+  border:none;
+  box-shadow:none;
+  background-color:transparent;
+}
+
+.disclaimer{
+  left:0;
+  right:0;
+  z-index:2;
+  bottom:3px;
+  font-size:9px;
+  display:block;
+  margin:0 auto;
+  max-width:200px;
+  line-height:14px;
+  text-align:center;
+  position:absolute;
+}
+
+.disclaimer a{
+  color:#000;
+  display:block;
+  margin-top:3px;
+}
+
+.btn{
+  color:#fff;
+  width:180px;
+  padding: 14px 10px;
+  display:block;
+  margin:0 auto;
+  font-size: 20px;
+  font-weight:bold;
+  border-radius:5px;
+  text-align:center;
+  text-decoration:none;
+  border:1px solid #9a2048; 
+  background: #cd0056; /* Old browsers */
+  background: -moz-linear-gradient(top,  #cd0056 0%, #ab0026 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cd0056), color-stop(100%,#ab0026)); /* Chrome,Safari4+ */  
+  background: -webkit-linear-gradient(top,  #cd0056 0%,#ab0026 100%); /* Chrome10+,Safari5.1+ */  
+  background: -o-linear-gradient(top,  #cd0056 0%,#ab0026 100%); /* Opera 11.10+ */ 
+  background: -ms-linear-gradient(top,  #cd0056 0%,#ab0026 100%); /* IE10+ */ 
+  background: linear-gradient(to bottom,  #cd0056 0%,#ab0026 100%); /* W3C */ 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cd0056', endColorstr='#ab0026',GradientType=0 ); /* IE6-9 */
+}
+
+.btn span {
+  -webkit-animation: blink 1s steps(5, start) infinite;
+  -o-animation: blink 1s steps(5, start) infinite;
+  -ms-animation: blink 1s steps(5, start) infinite;
+  -moz-animation: blink 1s steps(5, start) infinite;
+  animation: blink 1s steps(5, start) infinite;
+  backface-visibility: hidden;
+}
+@keyframes blink {
+  to {
+    visibility:  hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility:  hidden;
+  }
+}
+@-ms-keyframes blink {
+  to {
+    visibility:  hidden;
+  }
+}
+@-moz-keyframes blink {
+  to {
+    visibility:  hidden;
+  }
+}
+@-o-keyframes blink {
+  to {
+    visibility:  hidden;
+  }
+}
+
+
+#parallax{
+  top:-10px;
+  z-index:1;
+  width:300px;
+  height:190px;
+  display:block;
+  position:absolute;
+  background-size:300px 190px;
+  background-image:url(http://tags.mli.me/creative/SexEd/lk-_-en-mraid-250/img/bg.jpg);
+  animation:8000ms parallax ease-in-out infinite;
+  -webkit-animation:8000ms parallax ease-in-out infinite;
+}
+
+@keyframes parallax{
+  0%{
+    opacity:0.8;
+    transform:translateX(0px) scale(1,1);
+  }
+  
+  50%{
+    opacity:1;
+    transform:translateX(-50px) scale(1.1,1.1);
+  }
+  
+  100%{
+    opacity:0.8;
+    transform:translateX(0px) scale(1,1);
+  }
+}
+
+@-webkit-keyframes parallax{
+  0%{
+    opacity:0.8;
+    -webkit-transform:translateX(0px) scale(1,1);
+  }
+  
+  50%{
+    opacity:1;
+    -webkit-transform:translateX(-50px) scale(1.1,1.1);
+  }
+  
+  100%{
+    opacity:0.8;
+    -webkit-transform:translateX(0px) scale(1,1);
+  }
+}
+
+
+.subscribe {
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  position: absolute;
+}
+
+#double-confirmation-no{
+  color:#fff;
+  display:block;
+  font-size:14px;
+  padding:10px 0px;
+  text-decoration:underline;
+}
+
+#double-confirmation .subscription-info{
+  color:#fff;
+  display:block;
+  font-size:12px;
+  padding:10px 0px;
+}
+
+#number-entry label{
+  color:#fff;
+  display:block;
+  font-size:12px;
+  font-weight:bold;
+  padding:8px 0px 0px 0px;
+}
+
+#number-entry input {
+  width: 140px;
+}
+
+#number-entry input, #pin-entry input {
+  height: 30px;
+  direction: ltr;
+  display: block;
+  font-size: 14px;
+  text-align: left;
+  line-height: 20px;
+  border-radius: 4px;
+  padding:2px 0.500em;
+  vertical-align: middle;
+  border: 1px solid black;
+  margin: 5px auto 5px auto;
+}
+
+#already-subscribed-error,
+#invalid-number-error,
+#invalid-pin-error{
+  color:#fff;
+  font-size:8px;
+  padding-top:3px;
+}
+
+#pin-entry label{
+  color:#fff;
+  display:block;
+  font-size:7px;
+  font-weight:bold;
+  padding:8px 0px 0px 0px;
+}
+
+#pin-entry input{
+  width:60px;
+  text-align:center;
+}
+
+#pin-entry strong{
+  font-size:9px;
+}
+
+#pin-entry .subscription-info{
+  color:#fff;
+  display:block;
+  font-size:14px;
+  padding:10px 0px;
+}
+
+#mo .subscription-info{
+  color:#fff;
+  display:block;
+  font-size:9px;
+  padding:8px 0px 5px 0px;
+}
+
+#mo h3{
+  padding:0;
+  color:#fff;
+  font-size:14px;
+  margin:5px 0px;
+}
+
+#keyword,
+#short-code{
+  color:#F977AD;
+  font-weight:bold;
+}
+
+#congrats h3{
+  color:#fff;
+  font-size:14px;
+}
+
+#congrats h6{
+  color:#fff;
+  font-size:11px;
+}
+
+#operators{
+  margin-top: 45px
+}
+
+#operators span{
+  color:#1e1e1e;
+  font-size:11px;
+  display: block;
+  margin: 10px 0px;
+  font-weight: bold;
+  text-shadow:0px 1px 1px rgba(255,255,255,0.9);
+}
+
+#operators a{
+  /*float:left;*/
+  width:48px;
+  height:65px;
+  margin:2px 1px;
+  position: relative;
+  display:inline-block;
+}
+
+#operators a span{
+  left:0;
+  right:0;
+  bottom: 0;
+  margin: 0;
+  font-weight: normal;
+  position: absolute;
+}
+
+#operators a img{
+  width:48px;
+  display: block;
+  margin-bottom: 5px;
+}

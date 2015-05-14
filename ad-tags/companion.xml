@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VAST version="3.0">
+    <Ad id="c16503" sequence="1">
+        <InLine>
+            <AdSystem>Mone VAST</AdSystem>
+            <AdTitle>16503</AdTitle>
+            <Error>
+                                <![CDATA[
+                https://localhost:4000/vast-pixel.gif?eventType=error&errorCode=[ERRORCODE]&userId=1427353086014&sessionId=1431245677938&media=SelfieForDummies&lang=en&format=mp4
+                ]]>
+            </Error>
+            <Creatives>
+                <Creative>
+                    <Linear skipoffset="30%">
+                        <Duration>00:00:35.000</Duration>
+                        <VideoClicks>
+                            <ClickThrough id="clickme">
+                                                                <![CDATA[
+                                http://mobileacademy.com?userId=1427353086014&sessionId=1431245677938
+                                ]]>
+                            </ClickThrough>
+                            <ClickTracking>
+                                                                    <![CDATA[
+                                    http://localhost:4000/vast-pixel.gif?eventType=click&userId=1427353086014&sessionId=1431245677938&media=SelfieForDummies&lang=en&format=mp4
+                                    ]]>
+                            </ClickTracking>
+                        </VideoClicks>
+                        <MediaFiles>
+                            <MediaFile type="video/mp4" delivery="progressive">
+                                                                <![CDATA[
+                                http://localhost:4000/public/media/SelfieForDummies/en.mp4
+                                ]]>
+                            </MediaFile>
+                        </MediaFiles>
+                    </Linear>
+                </Creative>
+                 <Creative>
+                     <CompanionAds>
+                               <Companion id="573242" height="600" width="300"  apiFramework="VPAID">
+                                  <IFrameResource>
+                                    <![CDATA[https://tags.mli.me/lp/InternationalCuisine/ae-du-en-mraid-google]]>
+                                  </IFrameResource>
+                         </Companion>
+                     </CompanionAds>
+
+                 </Creative>
+                 <Creative>
+                     <CompanionAds>
+                               <Companion id="573241" height="250" width="300"  apiFramework="VPAID">
+                                  <IFrameResource>
+                                    <![CDATA[https://tags.mli.me/lp/SexEd/lk-_-en-mraid-250]]>
+                                  </IFrameResource>
+                         </Companion>
+                     </CompanionAds>
+
+                 </Creative>
+                 <Creative>
+                     <CompanionAds>
+                               <Companion id="573241" height="150" width="180"  apiFramework="VPAID">
+                                  <HTMLResource>
+                                    <![CDATA[<a href="javascript:void(0);" onclick="window.top.location='http://pages.mobileacademy.com'" >TESETSTEST</a>]]>
+                                  </HTMLResource>
+                         </Companion>
+                     </CompanionAds>
+
+                 </Creative>
+
+            </Creatives>
+        </InLine>
+    </Ad>
+</VAST>

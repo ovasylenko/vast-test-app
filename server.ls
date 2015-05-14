@@ -3,7 +3,12 @@ express = require \express
 ejs = require \ejs
 fs = require \fs
 url = require \url
+https = require \https
 
+private-key  = fs.readFileSync('key.pem', 'utf8')
+certificate = fs.readFileSync('cert.pem', 'utf8')
+
+credentials = { key: private-key , cert: certificate }
 die = (err, res) ->
     res.status 500
     res.end err.to-string!
@@ -19,6 +24,11 @@ app = express!
     ..set \views, __dirname + \/
     ..set 'view engine', 'ejs'
     ..use "/public" express.static "#__dirname/public"
+
+app.get "/main.css", (req,res) ->
+    err, css <- fs.read-file "#__dirname/public/main.css", \utf8 
+    return die err, res if !!err 
+    res.end css
 
 app.get "/crossdomain.xml", (req,res) ->
     res.set 'Content-Type', 'text/xml'
@@ -47,6 +57,12 @@ app.get "/vast.xml", (req,res) ->
             campaign-id: 5
         }
 
+app.get "/vpaid.js", (req,res) ->
+    res.set 'Content-Type', 'application/javascript'
+    err, js <- fs.read-file "#__dirname/vpaid.js", \utf8 
+    return die err, res if !!err 
+    res.end js
+
 app.get "/track/:eventType", (req,res) ->
     { event-type } = req.params
     { user-id } = req.query.user-id
@@ -57,6 +73,15 @@ app.get "/track/:eventType", (req,res) ->
     res.send empty-gif
     res.end!
 
+app.get "/companion.xml", (req,res) ->
+    try
+        res.set 'Content-Type', 'text/xml'
+        err, xml <- fs.read-file "#__dirname/ad-tags/companion.xml", \utf8 
+        return die err, res if !!err 
+        res.end xml
+    catch err
+        res.end JSON.stringify err
+
 app.get "/n-vast.xml", (req,res) ->
     try
         res.set 'Content-Type', 'text/xml'
@@ -65,6 +90,10 @@ app.get "/n-vast.xml", (req,res) ->
         res.end xml
     catch err
         res.end JSON.stringify err
+
+app.get "/tag.html" , (req, res) ->
+    res.set 'Content-Type', 'text/html'
+    res.end "<a>TESTSTSTESTSETSSET</a>"
 
 app.get "/videos/:name", (req, res) ->
     name = req.params.name
@@ -82,5 +111,7 @@ app.get "/videos/:name", (req, res) ->
    
     rs.pipe res 
 
+https-server = https.createServer credentials, app
+https-server.listen 443
 app.listen (process.env.PORT or config.port)
 console.log "listening on port #{config.port}"
