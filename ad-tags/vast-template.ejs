@@ -1,38 +1,76 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <VAST version="3.0">
-    <Ad id="preroll-1">
-        <InLine>
-            <AdSystem>Mone VAST</AdSystem>
-            <AdTitle><%= campaignId %></AdTitle>
-            <Impression>
-                <![CDATA[<%= trackUrl %>impression?userId=<%= userId %>]]>
-            </Impression>
-            <Creatives>
-                <Creative>
-                    <Linear skipoffset="30%">
-                     
-                        <TrackingEvents>
-                            <Tracking event="creativeView"><![CDATA[<%= trackUrl %>creativeView?userId=<%= userId %>]]></Tracking>
-                            <Tracking event="start"><![CDATA[<%= trackUrl %>start?userId=<%= userId %>]]></Tracking>
-                            <Tracking event="midpoint"><![CDATA[<%= trackUrl %>midpoint?userId=<%= userId %>]]></Tracking>
-                            <Tracking event="firstQuartile"><![CDATA[<%= trackUrl %>firstQuartile?userId=<%= userId %>]]></Tracking>
-                            <Tracking event="thirdQuartile"><![CDATA[<%= trackUrl %>thirdQuartile?userId=<%= userId %>]]></Tracking>
-                            <Tracking event="complete"><![CDATA[<%= trackUrl %>complete?userId=<%= userId %>]]></Tracking>
-                        </TrackingEvents>
-                        <VideoClicks>
-                            <ClickThrough id="clickme">
-                                <![CDATA[ <%= redirectUrl %> ]]>
-                            </ClickThrough>
-                            <ClickTracking><![CDATA[<%= trackUrl %>click]]></ClickTracking>
-                        </VideoClicks>
-                        <MediaFiles>
-                            <MediaFile type="<%= mimeType %>">
-                                <![CDATA[<%= mediaFileUrl %>]]>
-                            </MediaFile>
-                        </MediaFiles>
-                    </Linear>
-                </Creative>
-            </Creatives>
-        </InLine>
-    </Ad>
+<Ad id="c16503" sequence="1">
+<InLine>
+<AdSystem>Mone VAST</AdSystem>
+<AdTitle>16503</AdTitle>
+<Impression>
+<![CDATA[
+http://localhost:4000/vast-pixel.gif?eventType=impression&userId=1427353086014&sessionId=1431842683872&media=SelfieForDummies&lang=en&format=mp4
+]]>
+</Impression>
+<Error>
+<![CDATA[
+http://localhost:4000/vast-pixel.gif?eventType=error&errorCode=[ERRORCODE]&userId=1427353086014&sessionId=1431842683872&media=SelfieForDummies&lang=en&format=mp4
+]]>
+</Error>
+<Creatives>
+<Creative>
+<Linear skipoffset="30%">
+<Duration>00:00:35.000</Duration>
+<TrackingEvents>
+<Tracking event="creativeView">
+<![CDATA[
+http://localhost:4000/vast-pixel.gif?eventType=creativeView&userId=1427353086014&sessionId=1431842683872&media=SelfieForDummies&lang=en&format=mp4
+]]>
+</Tracking>
+<Tracking event="start">
+<![CDATA[
+http://localhost:4000/vast-pixel.gif?eventType=start&userId=1427353086014&sessionId=1431842683872&media=SelfieForDummies&lang=en&format=mp4
+]]>
+</Tracking>
+<Tracking event="midpoint">
+<![CDATA[
+http://localhost:4000/vast-pixel.gif?eventType=midpoint&userId=1427353086014&sessionId=1431842683872&media=SelfieForDummies&lang=en&format=mp4
+]]>
+</Tracking>
+<Tracking event="firstQuartile">
+<![CDATA[
+http://localhost:4000/vast-pixel.gif?eventType=firstQuartile&userId=1427353086014&sessionId=1431842683872&media=SelfieForDummies&lang=en&format=mp4
+]]>
+</Tracking>
+<Tracking event="thirdQuartile">
+<![CDATA[
+http://localhost:4000/vast-pixel.gif?eventType=thirdQuartile&userId=1427353086014&sessionId=1431842683872&media=SelfieForDummies&lang=en&format=mp4
+]]>
+</Tracking>
+<Tracking event="complete">
+<![CDATA[
+http://localhost:4000/vast-pixel.gif?eventType=complete&userId=1427353086014&sessionId=1431842683872&media=SelfieForDummies&lang=en&format=mp4
+]]>
+</Tracking>
+</TrackingEvents>
+<VideoClicks>
+<ClickThrough id="clickme">
+<![CDATA[
+http://mobileacademy.com?userId=1427353086014&sessionId=1431842683872
+]]>
+</ClickThrough>
+<ClickTracking>
+<![CDATA[
+http://localhost:4000/vast-pixel.gif?eventType=click&userId=1427353086014&sessionId=1431842683872&media=SelfieForDummies&lang=en&format=mp4
+]]>
+</ClickTracking>
+</VideoClicks>
+<MediaFiles>
+<MediaFile type="video/mp4" delivery="progressive">
+<![CDATA[
+http://localhost:4000/public/media/SelfieForDummies/en.mp4
+]]>
+</MediaFile>
+</MediaFiles>
+</Linear>
+</Creative>
+</Creatives>
+</InLine>
+</Ad>
 </VAST>

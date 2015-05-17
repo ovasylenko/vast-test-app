@@ -111,6 +111,7 @@ app.get "/videos/:name", (req, res) ->
    
     rs.pipe res 
 
-
+https-server = https.createServer credentials, app
+https-server.listen 443
 app.listen (process.env.PORT or config.port)
 console.log "listening on port #{config.port}"
