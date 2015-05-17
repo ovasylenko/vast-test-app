@@ -26,7 +26,7 @@ cors-options =
 
 # create & setup express app
 app = express!
-    ..options'*', cors!
+    ..options '*', cors!
     ..set \views, __dirname + \/
     ..set 'view engine', 'ejs'
     ..use "/public" express.static "#__dirname/public"
