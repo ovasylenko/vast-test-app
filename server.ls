@@ -23,7 +23,8 @@ empty-gif = new Buffer([
 cors-options = 
   origin: true
   credentials: true
-
+  allowedH-haders: true
+  max-age: 3600
 
 # create & setup express app
 app = express!
