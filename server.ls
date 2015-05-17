@@ -50,6 +50,8 @@ app.get "/crossdomain.xml", (req,res) ->
     
 app.get "/vast.xml", (req,res) ->
     res.set 'Content-Type', 'text/xml'
+    res.set-header 'Access-Control-Allow-Origin', '*'
+    res.set-header 'Access-Control-Allow-Credentials', true
     res.render do
         \ad-tags/vast-template.ejs
         {
