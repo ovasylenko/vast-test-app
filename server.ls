@@ -1,4 +1,5 @@
 config = require \./config
+cors = require \cors
 express = require \express
 ejs = require \ejs
 fs = require \fs
@@ -19,8 +20,13 @@ empty-gif = new Buffer([
     0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0x00, 0x02, 
     0x02, 0x44, 0x01, 0x00, 0x3b]);
 
+cors-options = {
+  origin: (origin, callback) ->
+    callback null, true
+
 # create & setup express app
 app = express!
+    ..options'*', cors!
     ..set \views, __dirname + \/
     ..set 'view engine', 'ejs'
     ..use "/public" express.static "#__dirname/public"
