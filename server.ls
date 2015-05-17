@@ -21,12 +21,13 @@ empty-gif = new Buffer([
     0x02, 0x44, 0x01, 0x00, 0x3b]);
 
 cors-options = 
-  origin: (origin, callback) ->
-    callback null, true
+  origin: true
+  credentials: true
+
 
 # create & setup express app
 app = express!
-    ..options '*', cors!
+    ..options '*', cors cors-options
     ..set \views, __dirname + \/
     ..set 'view engine', 'ejs'
     ..use "/public" express.static "#__dirname/public"
